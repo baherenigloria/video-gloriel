@@ -1,0 +1,313 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+}
+
+header .logo {
+    text-align: center;
+    font-size: 2rem;
+}
+
+header nav ul {
+    list-style: none;
+    text-align: center;
+    padding: 10px 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    background-color: #444;
+    color: white;
+    padding: 80px 0;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+/* Section Exemples de Vidéos */
+.examples {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.examples .video-gallery {
+    display: flex;
+    justify-content: flex-start; /* Aligne les vidéos à gauche */
+    flex-wrap: nowrap; /* Empêche les vidéos de se déplacer sur plusieurs lignes */
+    overflow-x: auto; /* Active le défilement horizontal */
+    gap: 20px; /* Espacement entre les vidéos */
+}
+
+.examples .video-item {
+    width: 30%;
+    margin: 0; /* Supprimer la marge pour ajuster à la ligne */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+    flex-shrink: 0; /* Empêche le rétrécissement de l'élément */
+}
+
+.examples .video-item video {
+    width: 100%;
+    height: auto;
+    max-height: 300px; /* Limite la hauteur pour garder une taille constante */
+}
+
+.examples .video-item p {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.examples .video-item button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.examples .video-item button:hover {
+    background-color: #0056b3; /* Changer la couleur au survol */
+}
+/* Section de Téléversement */
+.upload-section {
+    padding: 20px;
+    margin-top: 30px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.upload-section h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.upload-section form {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.upload-section input[type="file"] {
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.upload-section input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.upload-section input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
+/* Section Téléversement */
+.upload {
+    padding: 40px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.upload form {
+    max-width: 600px;
+    margin: auto;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.upload form input, .upload form textarea, .upload form button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+.upload form button {
+    background-color: #333;
+    color: white;
+    border: none;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
+/* Section des Catégories */
+.categories {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.categories .category-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.categories .category-item {
+    width: 20%;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.categories .category-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Feedback de téléchargement */
+#upload-feedback {
+    color: green;
+    margin-top: 10px;
+}
+/* Media Queries pour les écrans moyens (tablettes) */
+@media (max-width: 768px) {
+    header .logo {
+        font-size: 1.5rem;
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .examples .video-item {
+        width: 45%; /* Deux vidéos par ligne */
+    }
+
+    .categories .category-item {
+        width: 45%; /* Deux catégories par ligne */
+    }
+}
+
+/* Media Queries pour les petits écrans (téléphones) */
+@media (max-width: 480px) {
+    /* Logo du header */
+    header .logo {
+        font-size: 1.2rem; /* Réduit la taille du texte du logo */
+    }
+
+    /* Navigation du header */
+    header nav ul {
+        padding: 5px 0; /* Ajuste l'espacement des liens */
+    }
+
+    header nav ul li {
+        margin: 5px 0; /* Ajoute un espacement entre les éléments de navigation */
+    }
+
+    /* Section hero */
+    .hero h2 {
+        font-size: 1.8rem; /* Taille du titre adaptée aux petits écrans */
+    }
+
+    .hero p {
+        font-size: 1rem; /* Réduction de la taille du texte */
+    }
+
+    /* Section des vidéos (examples) */
+    .examples .video-item {
+        width: 100%; /* Chaque vidéo occupe toute la largeur */
+    }
+
+    /* Section des catégories */
+    .categories .category-item {
+        width: 100%; /* Chaque catégorie occupe toute la largeur */
+    }
+
+    /* Formulaire de téléchargement */
+    .upload form {
+        width: 90%; /* Formulaire plus étroit pour éviter le débordement */
+        padding: 15px; /* Ajoute un espacement interne */
+    }
+ /* Conteneur pour la table */
+ .table-container {
+    width: 100%; /* Utilise toute la largeur du parent */
+    overflow-x: auto; /* Ajoute un défilement horizontal si nécessaire */
+    padding: 0 10px; /* Ajoute de l'espace interne pour le confort */
+}
+   /* Table */
+   table {
+    width: 100%; /* Force la table à occuper 100% du conteneur */
+    border-collapse: collapse; /* Fusionne les bordures */
+}
+/* Cellules de la table */
+table th, table td {
+    padding: 8px; /* Espacement interne des cellules */
+    text-align: left; /* Texte aligné à gauche */
+    border: 1px solid #ddd; /* Bordures légères */
+    font-size: 0.9rem; /* Taille de texte adaptée */
+    word-wrap: break-word; /* Les mots sont coupés si trop longs */
+}
+
+/* En-têtes de la table */
+table th {
+    background-color: #f8f8f8; /* Fond gris clair */
+    font-weight: bold;
+    text-align: center; /* Aligne les en-têtes au centre */
+}
+}
+
+    /* Pied de page */
+    footer {
+        font-size: 0.9rem; /* Réduction de la taille du texte */
+    }
+
